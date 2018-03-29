@@ -20,6 +20,8 @@ namespace ForeingKeyTest.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Faculty> Faculties { set; get; }
+        public DbSet<Tribune> Tribunes { set; get; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
